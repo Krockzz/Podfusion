@@ -80,7 +80,7 @@ const CreatePodcast = () => {
         throw new Error('Please generate audio and image')
       }
 
-     /* const podcast = await createPodcast({
+     const podcast = await createPodcast({
         podcastTitle: data.podcastTitle,
         podcastDescription: data.podcastDescription,
         audioUrl,
@@ -93,7 +93,7 @@ const CreatePodcast = () => {
         audioStorageId: audioStorageId!,
         imageStorageId: imageStorageId!,
       })
-        */
+        
       toast({ title: 'Podcast created' })
       setIsSubmitting(false);
       router.push('/')
