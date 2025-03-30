@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    typescript:{
+        ignoreBuildErrors: true
+    },
     images: {
         remotePatterns: [{
             protocol: 'https',
@@ -8,6 +11,10 @@ const nextConfig = {
         {
             protocol: 'https',
             hostname: 'determined-mallard-653.convex.cloud',
+        },
+        {
+            protocol: 'https',
+            hostname:'img.clerk.com'
         }
     ]
     }

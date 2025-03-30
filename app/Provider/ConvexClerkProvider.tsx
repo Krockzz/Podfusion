@@ -13,13 +13,15 @@ const ConvexClerkProvider = ({ children }: { children: ReactNode }) => (
       socialButtonsVariant: 'iconButton',
       logoImageUrl: '/icons/auth-logo.svg'
     },
-    variables: {
+    
+     variables: {
       colorBackground: '#15171c',
-      colorPrimary: '',
-      colorText: 'white',
-      colorInputBackground: '#1b1f29',
+       colorPrimary: '',
+       colorText: 'white',
+       colorInputBackground: '#1b1f29',
       colorInputText: 'white',
     }
+    
   }}>
     <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
       {children}
