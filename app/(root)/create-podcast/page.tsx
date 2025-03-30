@@ -80,7 +80,7 @@ const CreatePodcast = () => {
         throw new Error('Please generate audio and image')
       }
 
-      const podcast = await createPodcast({
+     /* const podcast = await createPodcast({
         podcastTitle: data.podcastTitle,
         podcastDescription: data.podcastDescription,
         audioUrl,
@@ -93,6 +93,7 @@ const CreatePodcast = () => {
         audioStorageId: audioStorageId!,
         imageStorageId: imageStorageId!,
       })
+        */
       toast({ title: 'Podcast created' })
       setIsSubmitting(false);
       router.push('/')
@@ -120,7 +121,7 @@ const CreatePodcast = () => {
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">Title</FormLabel>
                   <FormControl>
-                    <Input className="input-class focus-visible:ring-offset-orange-1" placeholder="Pro Podcast" {...field} />
+                    <Input className="input-class focus-visible:ring-offset-orange-1" placeholder="JSM Pro Podcast" {...field} />
                   </FormControl>
                   <FormMessage className="text-white-1" />
                 </FormItem>
@@ -178,13 +179,13 @@ const CreatePodcast = () => {
                 setAudioDuration={setAudioDuration}
               />
 
-               <GenerateThumbnail 
+              <GenerateThumbnail 
                setImage={setImageUrl}
                setImageStorageId={setImageStorageId}
                image={imageUrl}
                imagePrompt={imagePrompt}
                setImagePrompt={setImagePrompt}
-              /> 
+              />
 
               <div className="mt-10 w-full">
                 <Button type="submit" className="text-16 w-full bg-orange-1 py-4 font-extrabold text-white-1 transition-all duration-500 hover:bg-black-1">
